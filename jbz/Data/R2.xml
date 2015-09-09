@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Round>
+  <Category Name="Cat1">
+    <Question Points="100" Type="Text">
+      <Quest>Question</Quest>
+      <Answer>And this is the answer</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="200" Type="Picture">
+      <Quest>Quest2</Quest>
+      <Answer>Answer2</Answer>
+      <Path>add.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="300" Type="Sound">
+      <Quest>Quest3</Quest>
+      <Answer>Answer3</Answer>
+      <Path>notify.wav</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="400" Type="Video">
+      <Quest>Quest4</Quest>
+      <Answer>Answer4</Answer>
+      <Path>Wildlife.wmv</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="500" Type="Text">
+      <Quest>Quest5</Quest>
+      <Answer>Answer5</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+  </Category>
+</Round>

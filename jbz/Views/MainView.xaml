@@ -1,0 +1,168 @@
+﻿<Grid x:Class="Jbz.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:Converters="clr-namespace:Jbz.Views.Converters" Height="600" Width="800" >
+    <Grid.Resources>
+        <Converters:BoolToVisibilityConverter x:Key="boolToVisibilityConverter"/>
+        
+        <Style TargetType="TextBlock" x:Key="ScoreText">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        
+        <Style TargetType="TextBlock" x:Key="CategoryText">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="PointsText">
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <EventSetter Event="PreviewMouseUp" Handler="TextBlock_PreviewMouseUp"/>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="Transparent"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Grid.Resources>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="15*"/>
+        <RowDefinition Height="90*"/>
+    </Grid.RowDefinitions>
+
+    <Grid Grid.Row="0" Background="AliceBlue">
+        <Rectangle Stroke="Black" StrokeThickness="2"></Rectangle>
+    </Grid>
+          
+
+    <Grid Name="ScoreGrid" Grid.Row="0" Background="AliceBlue" Visibility="{Binding IsScoresShown, Converter={StaticResource boolToVisibilityConverter}, ConverterParameter=false}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        
+        <Rectangle Grid.ColumnSpan="5" Grid.RowSpan="2" Stroke="Black" StrokeThickness="2"></Rectangle>
+        
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding Player1.Name}" Style="{StaticResource ScoreText}" ></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="{Binding Player1.Points}" Style="{StaticResource ScoreText}" ></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Player2.Name}" Style="{StaticResource ScoreText}" ></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Player2.Points}" Style="{StaticResource ScoreText}" ></TextBlock>
+
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="{Binding Player3.Name}" Style="{StaticResource ScoreText}" ></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Player3.Points}" Style="{StaticResource ScoreText}" ></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="0" Text="{Binding Player4.Name}" Style="{StaticResource ScoreText}" ></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="1" Text="{Binding Player4.Points}" Style="{StaticResource ScoreText}" ></TextBlock>
+
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="{Binding Player5.Name}" Style="{StaticResource ScoreText}" ></TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="1" Text="{Binding Player5.Points}" Style="{StaticResource ScoreText}" ></TextBlock>
+    </Grid>
+    
+    
+    <Grid Name="QuestionGrid" Grid.Row="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+
+        
+        <Rectangle Grid.Column="0" Grid.Row="0" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="1" Grid.Row="0" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="0" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="3" Grid.Row="0" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="4" Grid.Row="0" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="0" Grid.Row="1" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="1" Grid.Row="1" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="1" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="3" Grid.Row="1" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="4" Grid.Row="1" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="0" Grid.Row="2" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="1" Grid.Row="2" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="2" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="3" Grid.Row="2" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="4" Grid.Row="2" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="0" Grid.Row="3" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="1" Grid.Row="3" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="3" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="3" Grid.Row="3" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="4" Grid.Row="3" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="0" Grid.Row="4" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="1" Grid.Row="4" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="4" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="3" Grid.Row="4" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="4" Grid.Row="4" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="0" Grid.Row="5" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="1" Grid.Row="5" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="5" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="3" Grid.Row="5" Stroke="Black" StrokeThickness="2"></Rectangle>
+        <Rectangle Grid.Column="4" Grid.Row="5" Stroke="Black" StrokeThickness="2"></Rectangle>
+
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding Category1.Category}" Style="{StaticResource CategoryText}" TextWrapping="Wrap"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Category2.Category}" Style="{StaticResource CategoryText}" TextWrapping="Wrap"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="{Binding Category3.Category}" Style="{StaticResource CategoryText}" TextWrapping="Wrap"></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="0" Text="{Binding Category4.Category}" Style="{StaticResource CategoryText}" TextWrapping="Wrap"></TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="{Binding Category5.Category}" Style="{StaticResource CategoryText}" TextWrapping="Wrap"></TextBlock>
+
+
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="{Binding Category1.Points1}" IsEnabled="{Binding Category1.Points1Active}" Style="{StaticResource PointsText}" Name="C1P1"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="{Binding Category1.Points2}" IsEnabled="{Binding Category1.Points2Active}" Style="{StaticResource PointsText}" Name="C1P2"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="{Binding Category1.Points3}" IsEnabled="{Binding Category1.Points3Active}" Style="{StaticResource PointsText}" Name="C1P3"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="{Binding Category1.Points4}" IsEnabled="{Binding Category1.Points4Active}" Style="{StaticResource PointsText}" Name="C1P4"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="5" Text="{Binding Category1.Points5}" IsEnabled="{Binding Category1.Points5Active}" Style="{StaticResource PointsText}" Name="C1P5"></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Category2.Points1}" IsEnabled="{Binding Category2.Points1Active}" Style="{StaticResource PointsText}" Name="C2P1"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Category2.Points2}" IsEnabled="{Binding Category2.Points2Active}" Style="{StaticResource PointsText}" Name="C2P2"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding Category2.Points3}" IsEnabled="{Binding Category2.Points3Active}" Style="{StaticResource PointsText}" Name="C2P3"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding Category2.Points4}" IsEnabled="{Binding Category2.Points4Active}" Style="{StaticResource PointsText}" Name="C2P4"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding Category2.Points5}" IsEnabled="{Binding Category2.Points5Active}" Style="{StaticResource PointsText}" Name="C2P5"></TextBlock>
+
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Category3.Points1}" IsEnabled="{Binding Category3.Points1Active}" Style="{StaticResource PointsText}" Name="C3P1"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="{Binding Category3.Points2}" IsEnabled="{Binding Category3.Points2Active}" Style="{StaticResource PointsText}" Name="C3P2"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="{Binding Category3.Points3}" IsEnabled="{Binding Category3.Points3Active}" Style="{StaticResource PointsText}" Name="C3P3"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="4" Text="{Binding Category3.Points4}" IsEnabled="{Binding Category3.Points4Active}" Style="{StaticResource PointsText}" Name="C3P4"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="5" Text="{Binding Category3.Points5}" IsEnabled="{Binding Category3.Points5Active}" Style="{StaticResource PointsText}" Name="C3P5"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="1" Text="{Binding Category4.Points1}" IsEnabled="{Binding Category4.Points1Active}" Style="{StaticResource PointsText}" Name="C4P1"></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="2" Text="{Binding Category4.Points2}" IsEnabled="{Binding Category4.Points2Active}" Style="{StaticResource PointsText}" Name="C4P2"></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="3" Text="{Binding Category4.Points3}" IsEnabled="{Binding Category4.Points3Active}" Style="{StaticResource PointsText}" Name="C4P3"></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="4" Text="{Binding Category4.Points4}" IsEnabled="{Binding Category4.Points4Active}" Style="{StaticResource PointsText}" Name="C4P4"></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="5" Text="{Binding Category4.Points5}" IsEnabled="{Binding Category4.Points5Active}" Style="{StaticResource PointsText}" Name="C4P5"></TextBlock>
+
+        <TextBlock Grid.Column="4" Grid.Row="1" Text="{Binding Category5.Points1}" IsEnabled="{Binding Category5.Points1Active}" Style="{StaticResource PointsText}" Name="C5P1"></TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="2" Text="{Binding Category5.Points2}" IsEnabled="{Binding Category5.Points2Active}" Style="{StaticResource PointsText}" Name="C5P2"></TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="3" Text="{Binding Category5.Points3}" IsEnabled="{Binding Category5.Points3Active}" Style="{StaticResource PointsText}" Name="C5P3"></TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="4" Text="{Binding Category5.Points4}" IsEnabled="{Binding Category5.Points4Active}" Style="{StaticResource PointsText}" Name="C5P4"></TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="5" Text="{Binding Category5.Points5}" IsEnabled="{Binding Category5.Points5Active}" Style="{StaticResource PointsText}" Name="C5P5"></TextBlock>
+    </Grid>
+</Grid>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Round>
+  <Category Name="Cat1">
+    <Question Points="100" Type="Text">
+      <Quest>Bla bla bla. This is a very long question!</Quest>
+      <Answer>And this is the answer</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="200" Type="Picture">
+      <Quest>Quest2</Quest>
+      <Answer>Answer2</Answer>
+      <Path>add.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="300" Type="Sound">
+      <Quest>Quest3</Quest>
+      <Answer>Answer3</Answer>
+      <Path>notify.wav</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="400" Type="Video">
+      <Quest>Quest4</Quest>
+      <Answer>Answer4</Answer>
+      <Path>sample_mpeg4.mp4</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="500" Type="Video">
+      <Quest>Quest5</Quest>
+      <Answer>Answer5</Answer>
+      <Path>Wildlife.wmv</Path>
+      <Bonus>0</Bonus>
+    </Question>
+  </Category>
+  <Category Name="Cat2">
+    <Question Points="100" Type="Text">
+      <Quest>Quest1</Quest>
+      <Answer>Answer1</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="200" Type="Picture">
+      <Quest>Quest2</Quest>
+      <Answer>Answer2</Answer>
+      <Path>accept.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="300" Type="Sound">
+      <Quest>Quest3</Quest>
+      <Answer>Answer3</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="400" Type="Video">
+      <Quest>Quest4</Quest>
+      <Answer>Answer4</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="500" Type="Text">
+      <Quest>Quest5</Quest>
+      <Answer>Answer5</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+  </Category>
+  <Category Name="Flags of our father">
+    <Question Points="100" Type="Picture">
+      <Quest>Hvilket land tilhører dette flag?</Quest>
+      <Answer>Frankrig</Answer>
+      <Path>flag1.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="200" Type="Picture">
+      <Quest>Hvilket land tilhører dette flag?</Quest>
+      <Answer>Portugal</Answer>
+      <Path>flag2.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="300" Type="Picture">
+      <Quest>Hvilket land tilhører dette flag?</Quest>
+      <Answer>Færøerne</Answer>
+      <Path>flag3.png</Path>
+      <Bonus>1</Bonus>
+    </Question>
+    <Question Points="400" Type="Picture">
+      <Quest>Hvilket land tilhører dette flag?</Quest>
+      <Answer>Cuba</Answer>
+      <Path>flag4.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="500" Type="Picture">
+      <Quest>Hvilket land tilhører dette flag?</Quest>
+      <Answer>Sri Lanka</Answer>
+      <Path>flag5.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+  </Category>
+  <Category Name="IHA">
+    <Question Points="100" Type="Picture">
+      <Quest>Hvem er denne person?</Quest>
+      <Answer>Stig Kalmo</Answer>
+      <Path>iha1.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="200" Type="Picture">
+      <Quest>Hvem er denne person?</Quest>
+      <Answer>Michael Alrøe</Answer>
+      <Path>iha2.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="300" Type="Picture">
+      <Quest>Hvem er denne person?</Quest>
+      <Answer>Rene Gajda</Answer>
+      <Path>iha3.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="400" Type="Picture">
+      <Quest>Hvem er denne person?</Quest>
+      <Answer>Poul Ejnar Rovsing</Answer>
+      <Path>iha4.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+    <Question Points="500" Type="Picture">
+      <Quest>Hvem er denne person?</Quest>
+      <Answer>Jesper Tørresø</Answer>
+      <Path>iha5.png</Path>
+      <Bonus>0</Bonus>
+    </Question>
+  </Category>
+</Round>

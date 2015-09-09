@@ -1,0 +1,8 @@
+﻿<Window x:Class="Jbz.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Views="clr-namespace:Jbz.Views" Title="JeBuzzdy v2.0" 
+        Height="650" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="CanResize">
+    <Views:MainView x:Name="MainView">
+
+    </Views:MainView>
+</Window>

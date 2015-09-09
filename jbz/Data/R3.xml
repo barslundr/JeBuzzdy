@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Round>
+  <Category Name="Cat1">
+    <Question Points="Final" Type="Text">
+      <Quest>Final</Quest>
+      <Answer>Answer1</Answer>
+      <Path></Path>
+      <Bonus>0</Bonus>
+    </Question>
+  </Category>
+</Round>
